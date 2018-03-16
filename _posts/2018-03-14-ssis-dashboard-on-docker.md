@@ -5,12 +5,14 @@ title: "SSIS Dashboard: Docker and ADF v2 support"
 
 I’ve worked a little on my SSIS Dashboard project lately and I’ve been able to reach two important milestones for the project:
 
-    Support Docker deployment
-    Support SSIS running on Azure Data Factory v2
+- Support Docker deployment
+- Support SSIS running on Azure Data Factory v2
 
-# Docker Support
+## Docker Support
 
 If you are not confident with Python installation and configuration, or you just want to have a SSIS Dashboard running in couple of minutes without bothering to download and install all the attached strings, now you can just use the following docker image:
+
+![](public/images/2018-03-14-ssis-dashboard-on-docker-image-1.png)
 
 [SSIS Dashboard @ GitHub](https://hub.docker.com/r/yorek/ssis-dashboard/)
 
@@ -28,7 +30,7 @@ If you want to monitor your package running in the cloud, of course you can also
 
 [Use the Azure Docker VM Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/dockerextension)
 
-# Monitor SSIS Running on ADF v2
+## Monitor SSIS Running on ADF v2
 
 If you have moved your packages on Azure Data Factory v2, you’ll be happy to know that SSIS Dashboard works perfectly fine also in that scenario.
 

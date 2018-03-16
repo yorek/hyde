@@ -13,13 +13,11 @@ url:              https://blog.davidemauri.it
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Davide Mauri'
+  url:            https://twitter.com/mauridb
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          2.0
 
-github:
-  repo:           https://github.com/poole/hyde
