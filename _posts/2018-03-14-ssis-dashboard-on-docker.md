@@ -72,6 +72,12 @@ docker run -d -p 5000:5000 --name ssis-dashboard -e DASHBOARD_CONFIG=config.cfg 
 
 You can check that everything is running fine via docker logs:
 
+![](/public/images/2018-03-14/2018-03-14-ssis-dashboard-on-docker-image-2.png)
+
+
 and here’s the dashboard running:
+
+![](/public/images/2018-03-14/2018-03-14-ssis-dashboard-on-docker-image-3.png)
+
 
 As usual, enjoy!
