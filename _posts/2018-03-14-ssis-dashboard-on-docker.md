@@ -12,7 +12,7 @@ I’ve worked a little on my SSIS Dashboard project lately and I’ve been able 
 
 If you are not confident with Python installation and configuration, or you just want to have a SSIS Dashboard running in couple of minutes without bothering to download and install all the attached strings, now you can just use the following docker image:
 
-![](public/images/2018-03-14-ssis-dashboard-on-docker-image-1.png)
+![](/public/images/2018-03-14-ssis-dashboard-on-docker-image-1.png)
 
 [SSIS Dashboard @ GitHub](https://hub.docker.com/r/yorek/ssis-dashboard/)
 
