@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SSIS Dashboard: Docker and ADF v2 support
+title: "SSIS Dashboard: Docker and ADF v2 support"
 ---
 
 I’ve worked a little on my SSIS Dashboard project lately and I’ve been able to reach two important milestones for the project:
