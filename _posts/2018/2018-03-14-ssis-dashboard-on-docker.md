@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "SSIS Dashboard: Docker and ADF v2 support"
+subtitle: "Now a nice SSIS dashboard is just a docker pull away"
+tags: ssis dashboard docker adf azure "azure data factory"
 ---
 
 I’ve worked a little on my SSIS Dashboard project lately and I’ve been able to reach two important milestones for the project:

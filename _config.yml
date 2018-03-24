@@ -1,27 +1,16 @@
-# Dependencies
 highlighter:      rouge
 
-# Permalinks
 permalink:        pretty
 
-# Setup
 title:            Davide Mauri's Blog
 tagline:          'Something clever is supposed to be written here.'
 description:      'Microsoft Data Platform MVP for 12 years, now blue badge with passion for Data Platform and Development.'
 url:              https://blog.davidemauri.it
 baseurl:          /
-
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
+version:          2.1.0
 
 plugins:
   - jekyll-paginate
 
-# Custom vars
-version:          2.1.0
+paginate:         5
 
-github:
-  repo:           https://github.com/poole/hyde

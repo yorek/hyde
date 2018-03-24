@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Machine Learning on the Edge with Docker"
+subtitle: "Using Anaconda distribution with Docker and the Azure IoT Edge Python SDK"
+tags: iot edge docker python anaconda miniconda "machine learning"
 ---
 
 ## Using Anaconda distribution with Docker and the Azure IoT Edge Python SDK
