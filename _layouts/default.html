@@ -8,15 +8,7 @@
     {% include sidebar.html %}
 
     <div class="content container">
-      <ul>
-        {% for post in site.posts %}
-          <li>
-            <div class="posts-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-            <div class="posts-subtitle">{{ post.subtitle }}</div>
-            <div class="posts-date">{{ post.date | date_to_long_string }}</div>
-          </li>
-        {% endfor %}
-      </ul>
+      {{ content }}
     </div>
 
   </body>

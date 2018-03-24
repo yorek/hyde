@@ -5,7 +5,6 @@ subtitle: "Using Anaconda distribution with Docker and the Azure IoT Edge Python
 tags: iot edge docker python anaconda miniconda "machine learning"
 ---
 
-## Using Anaconda distribution with Docker and the Azure IoT Edge Python SDK
 [Anaconda](https://www.anaconda.com/download/) is a very well-known Python (and lately R) distribution, specifically created for Data Science and Machine Learning purposes (even though it can be used for more generic development). With the IoT Edge request on the rise, having Anaconda running on the edge is becoming a common request.
 
 If you just want to start to play with ML on the Edge, there is a very nice tutorial that show how to leverage the Azure ML Workbench and IoT Edge here:
@@ -23,7 +22,7 @@ conda install <package>
 
 In case you're wondering yes, you can also use PIP if the package you want is not available in the Anaconda repository. More details here:
 
-https://docs.anaconda.com/anaconda/
+[https://docs.anaconda.com/anaconda/](https://docs.anaconda.com/anaconda/)
 
 ## Running *conda on Docker
 ### Ubuntu and Windows Server
