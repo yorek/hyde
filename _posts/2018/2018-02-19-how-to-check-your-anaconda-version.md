@@ -33,7 +33,12 @@ and then update the meta-package
 
 `conda update anaconda`
 
-that will update all the anaconda distribution. Once “anaconda” meta-package is updated, you’ll have the latest Anaconda distribution
+that will update all the anaconda distribution. Once “anaconda” meta-package is updated, you’ll have the latest Anaconda distribution.
+
+*April 2018 Update*: If you want to update everything, not only python packages, but also additional software like anaconda-navigator and similar, you can go for an “update all”:
+
+`conda update --all`
+
 
 ## Additional Anaconda Information
 
