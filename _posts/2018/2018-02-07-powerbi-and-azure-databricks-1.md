@@ -25,7 +25,7 @@ And following it is really not difficult, but it may be a bit tricky, if you're 
 
 First of all make sure you have the latest PowerBI version installed on your machine:
 
-[How to Get Started | Microsoft Power BI](https://powerbi.microsoft.com/en-us/get-started/)
+[How to Get Started - Microsoft Power BI](https://powerbi.microsoft.com/en-us/get-started/)
 
 and then download the Apache Spark JDBC/ODBC driver:
 
