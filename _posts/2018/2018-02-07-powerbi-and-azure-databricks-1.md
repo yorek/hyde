@@ -101,4 +101,4 @@ As you may notice I've also added the "farmer_markets" as a non-temporary table,
 
 And now you can easily explore and visualize data, PowerBI way:
 
-![](/public/images/2018-02-07/image-04.png)
+![](/public/images/2018-02-07/image-14.png)
