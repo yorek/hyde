@@ -27,29 +27,29 @@ Using them with Dapper is embarrassingly simple. Once you have created an `IEnum
 
 So, say you have defined the following TVP on SQL Server:
 
-![](https://cdn-images-1.medium.com/max/800/1*ZxR3RPGKqAFYWjrbwXe3SQ.png)
+![](/public/images/2018-01-15/image-01.png)
 
 in your .NET application all you have to do is to create a DataTable that is compatible with the table type schema and fill it with data:
 
-![](https://cdn-images-1.medium.com/max/800/1*DlSGlhF9c4aTbBOrzOgMSw.png)
+![](/public/images/2018-01-15/image-02.png)
 
 and once this is done you can just pass it as a parameter using the `AsTableValuedParameter` extension method to inform Dapper that such DataTable must be mapped to the TVP:
 
-![](https://cdn-images-1.medium.com/max/800/1*I9hGyirYuOgPgDDvHpPS9Q.png)
+![](/public/images/2018-01-15/image-03.png)
 
 This just work smoothly in .NET Framework. **In .NET Core, the mentioned extension method has not been added yet**, as of Dapper version 1.50.4…so the way to solve the problem is to _extend_ Dapper and create a custom query parameter. I’ve learned this technique by studying Dapper code itself. No guarantee it will work in future, but it works now, and that’s enough. I’m sure that in future version Dapper will support the nice extension method also in .NET Core natively.
 
 Here’s a sample code for the custom parameter:
 
-![](https://cdn-images-1.medium.com/max/800/1*Vuv1PIq-v66LoOTXtODC0w.png)
+![](/public/images/2018-01-15/image-04.png)
 
 Once this class is in place, the query invocation will just need a small change:
 
-![](https://cdn-images-1.medium.com/max/800/1*XvzKptJ8leBoCoUmzx-27A.png)
+![](/public/images/2018-01-15/image-05.png)
 
 Done, the TVP is working as expected also in .NET Core, as the SQL Server Profiler confirms:
 
-![](https://cdn-images-1.medium.com/max/800/1*9AwC8ZSwrr_AcXMRwb6aHw.png)
+![](/public/images/2018-01-15/image-06.png)
 
 ## Spatial Data Types
 
@@ -57,7 +57,7 @@ Bad news first. The [SqlGeometry](https://msdn.microsoft.com/en-us/library/micro
 
 Beside this, the good news is that Dapper is completely transparent to the fact that this is not a native type (which is exactly what we could expect from a micro ORM). After having added the package `Microsoft.SqlServer.Types` via [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Types), all is needed to do is to use the Spatial Data Types:
 
-![](https://cdn-images-1.medium.com/max/800/1*4mEWluWZN4IsYE6vCUoEPg.png)
+![](/public/images/2018-01-15/image-07.png)
 
 ## HiearchyID Data Type
 
@@ -65,7 +65,7 @@ Same as before, `[HierachyID](https://docs.microsoft.com/en-us/sql/t-sql/data-ty
 
 Same as before, all you need to do is to add the NuGet package and you’re good to go. Using it is straightforward, since nothing special needs to be done in order to use it as a parameter or as the result of a query:
 
-![](https://cdn-images-1.medium.com/max/800/1*uquOSQJXOw91SjqnvIS8mQ.png)
+![](/public/images/2018-01-15/image-08.png)
 
 ## A note on `Microsoft.SqlServer.Types`
 
@@ -75,11 +75,11 @@ Reality is that you may have some troubles having the types provided by `Microso
 
 and then download the “SQLSysClrTypes.msi” file:
 
-![](https://cdn-images-1.medium.com/max/800/1*_fp5FeE4TdKkxepHR2ra3w.png)
+![](/public/images/2018-01-15/image-09.png)
 
 Once this has been installed, you just have to make sure your application correctly look for it, using the Assembly Binding feature. This means that you have to put the following code in your app.config file:
 
-![](https://cdn-images-1.medium.com/max/800/1*soLnU10P1E2KDIK5_0JhyA.png)
+![](/public/images/2018-01-15/image-10.png)
 
 ## Samples
 
@@ -96,4 +96,3 @@ Support to native SQL Server feature is native and works just right out of the b
 ## What’s Next
 
 Extending Dapper is the topic of the next articles: how to customize Dapper behavior to make sure it can handle all possible scenarios, even the most exotic ones.
-
