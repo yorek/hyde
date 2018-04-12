@@ -61,7 +61,7 @@ Beside this, the good news is that Dapper is completely transparent to the fact 
 
 ## HiearchyID Data Type
 
-Same as before, `[HierachyID](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference)` is supported only in .NET Framework and not in .NET Core, and it is provided by the `Microsoft.SqlServer.Types` package.
+Same as before, [HierachyID](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference) is supported only in .NET Framework and not in .NET Core, and it is provided by the `Microsoft.SqlServer.Types` package.
 
 Same as before, all you need to do is to add the NuGet package and you’re good to go. Using it is straightforward, since nothing special needs to be done in order to use it as a parameter or as the result of a query:
 
