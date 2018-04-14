@@ -2,7 +2,7 @@
 layout: post
 title: "Custom Columns Mapping"
 subtitle: "Go beyond the \"same name\" mapping"
-tags: dapper .net micro-orm orm column-mapping
+tags: dapper dotnet micro-orm orm column-mapping
 ---
 
 Automatic mapping by name is nice, and it makes everything easier especially at the beginning and whenever there are no complex mapping requirements, but sooner then later the need to define a custom mapping logic will emerge.
