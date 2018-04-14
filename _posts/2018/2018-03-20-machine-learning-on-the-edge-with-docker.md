@@ -2,7 +2,7 @@
 layout: post
 title: "Machine Learning on the Edge with Docker"
 subtitle: "Using Anaconda distribution with Docker and the Azure IoT Edge Python SDK"
-tag: iot, iot-edge, docker, python, anaconda, miniconda, machine-learning
+tags: iot iot-edge docker python anaconda miniconda machine-learning
 ---
 
 [Anaconda](https://www.anaconda.com/download/) is a very well-known Python (and lately R) distribution, specifically created for Data Science and Machine Learning purposes (even though it can be used for more generic development). With the IoT Edge request on the rise, having Anaconda running on the edge is becoming a common request.
