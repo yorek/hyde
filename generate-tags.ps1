@@ -23,7 +23,7 @@ New-Item .\tag -ItemType "directory" > $null
 
 $template = "--- 
 layout: tag 
-title: Blog 
+title: {0} 
 tag: {0}
 --- 
 "
