@@ -21,15 +21,15 @@ foreach($post in $posts)
 Remove-Item .\tag\ -Force -Recurse -ErrorAction SilentlyContinue
 New-Item .\tag -ItemType "directory" > $null
 
-$template = "--- 
-layout: tag 
-title: {0} 
+$template = "---
+layout: tag
+title: Post tagged with {0}
 tag: {0}
---- 
+---
 "
 
 foreach($tag in $tags)
 {
-    $template -f $tag | Out-File (".\tag\{0}.html" -f $tag)
+    $template -f $tag | Out-File (".\tag\{0}.html" -f $tag) -Encoding "Default" 
 }
 
