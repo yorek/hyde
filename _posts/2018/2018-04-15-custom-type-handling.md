@@ -6,7 +6,7 @@ tags: dapper dotnet micro-orm orm custom-handling
 ---
 
 To map - or better - deserialize data coming from your database into a complex custom object Dapper supports a feature named “Custom Handlers”.
-As you already learned in previous posts, with simple object you don’t have to do anything special since Dapper automatically maps database columns to properties with the same name. If you only need to change this mapping logic you can do that using [Custom Mappers](/2018/02/12/custom-columns-mapping/). If you need to completely control how database data is mapped your object that you need a Custom Handler.
+As you already learned in previous posts, with simple object you don’t have to do anything special since Dapper automatically maps database columns to properties with the same name. If you only need to change this mapping logic you can do that using [Custom Mappers](/2018/02/12/custom-columns-mapping/). If you need to completely control how database data is mapped your object then you need a Custom Handler.
 
 ## Custom Handling
 
@@ -22,7 +22,7 @@ but in your database you have user a rather different approach, storing the role
 
 ![](/public/images/2018-04-15/image-03.png)
 
-Well, in this situation the automatic mapping of Dapper.NET is pretty useless since it will try to map a string (the Roles column) to a `Roles` object and, of course, if you try to execute even a simple query that involves the Roles object, like:
+Well, in this situation the automatic mapping of Dapper is pretty useless since it will try to map a string (the Roles column) to a `Roles` object and, of course, if you try to execute even a simple query that involves the `Roles` object, like:
 
 ```
 SELECT Id, FirstName, LastName, Roles FROM dbo.Users WHERE Id = 1
@@ -40,29 +40,29 @@ since there is no implict cast from a `String` to a `Roles` object. Same happens
 conn.Execute("UPDATE dbo.Users SET Roles = @roles WHERE Id = @userId", new { @userId = 1, @roles = roles });
 ```
 
-the result error will be:
+the resulting error will be:
 
 ```
 Unhandled Exception: System.NotSupportedException: The member  of type Dapper.Samples.Advanced.CustomHandling+Role cannot be used as a parameter value
 ```
 
-These two errors are the way Dappers tells you that it doesn't know how to deal with your complex `Roles` class. How data stored in a table column can be used to deserialize the object? And how that object should be serialized into the database?
+These two errors are the way Dapper tells you that it doesn't know how to deal with your complex `Roles` class. How data stored in a table column can be used to deserialize the object? And how that object should be serialized into the database?
 
 The way you can help Dapper figure out all of this is by creating an explicit mapping using the `SqlMapper.TypeHandler` base class. By creating an object that inherits from the mentioned class you have two methods to overload where you can define how data is handled when it needs to be passed to the database (`SetValue`), and how to handle it when the database gives a value back to you (`Parse`):
 
 ![](/public/images/2018-04-15/image-04.png)
 
-The called methods provided by the `Roles` class, are also very simple: they just convert a comma-separated values from and to a list of `Role`:
+The called methods provided by the `Roles` class are also very simple: they just convert a comma-separated values from and to a list of `Role`:
 
 ![](/public/images/2018-04-15/image-05.png)
 
-Once this is done, the new Type Handler needs to be registered with Dapper so that it knows it can be used. This is as easy as doing the followin:
+Once this is done, the new Type Handler needs to be registered with Dapper so that it knows it can be used. This is as easy as doing the following:
 
 ```
 SqlMapper.AddTypeHandler(new RolesTypeHandler());
 ```
 
-And now that is set, every time somewhere in your code you'll try to use a `Roles` object as a query parameter or as the result of a query, Dapper will know how to deal with it, so that the followin code will now work perfectly:
+And now that is set, every time somewhere in your code you'll try to use a `Roles` object as a query parameter or as the result of a query, Dapper will know how to deal with it, so that the following code will now work perfectly:
 
 ![](/public/images/2018-04-15/image-06.png)
 
@@ -100,7 +100,7 @@ The code mentioned above is included in the "Custom Handling" sample in the GitH
 
 ## Conclusion
 
-Being able to explicitly define how data is serialized and deserialized into the database fix almost all limitations that Dapper may have shown so far. And it opens up interesting scenario, where any object, even the most complex one, can be stored into a relational database in the preferred format (entirely normalized, partially normalized or completely denormalized). Pair this ability with the fact that modern relational database (like SQL Server or PostgreSQL for example) handle JSON natively and with great performances, and you can really do something amazing here.
+Being able to explicitly define how data is serialized and deserialized into the database fix almost all limitations that Dapper may have shown so far. And it opens up interesting scenario, where any object, even the most complex one, can be stored into a relational database in the preferred format (entirely normalized, partially normalized or completely denormalized). Pair this ability with the fact that modern relational databases (like SQL Server or PostgreSQL for example) handle JSON natively and with great performances, and you can really do something amazing here.
 
 ## What's Next
 
