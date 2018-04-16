@@ -76,7 +76,7 @@ Unhandled Exception: System.Data.DataException: Error parsing column 3 (Tags=["D
 
 this happens because SQL Server returns JSON as a string...and since there is no implicit conversion between a `String` and `JArray` the above error is thrown.
 
-Luckly we know how to fix the problem now. All is needed is a custom Type Handler to tell Dapper how to deal with JSON. Really simple, here you go:
+Luckily we know how to fix the problem now. All is needed is a custom Type Handler to tell Dapper how to deal with JSON. Really simple, here you go:
 
 ![](/public/images/2018-04-15/image-07.png)
 
@@ -100,8 +100,8 @@ The code mentioned above is included in the "Custom Handling" sample in the GitH
 
 ## Conclusion
 
-Being able to hook into the mapping logic, enables quite a few interesting scenario. The simplest one is the one shown in the example, by using a dictionary to specific mapping rules.
+Being able to explicitly define how data is serialized and deserialized into the database fix almost all limitations that Dapper may have shown so far. And it opens up interesting scenario, where any object, even the most complex one, can be stored into a relational database in the preferred format (entirely normalized, partially normalized or completely denormalized). Pair this ability with the fact that modern relational database (like SQL Server or PostgreSQL for example) handle JSON natively and with great performances, and you can really do something amazing here.
 
 ## What's Next
 
-With the acquired knowledge, some *lateral thinking*, and the JSON support in SQL Server (or your preferred relational database), it is now easy to make Dapper able to deal with 1:N relationships, even without using `JArray` objects. We'll discuss this extremely intersting topic in the next post. Stay tuned.
+With the acquired knowledge, some [*lateral thinking*](https://en.wikipedia.org/wiki/Lateral_thinking), and the JSON support in SQL Server (or your preferred relational database), it is now easy to make Dapper able to deal with 1:N relationships, even without using `JArray` objects. We'll discuss this extremely interesting topic in the next post. Stay tuned.
