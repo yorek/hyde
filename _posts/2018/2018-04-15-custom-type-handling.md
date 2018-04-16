@@ -22,10 +22,10 @@ but in your database you have user a rather different approach, storing the role
 
 ![](/public/images/2018-04-15/image-03.png)
 
-Well, in this situation the automatic mapping of Dapper.NET is pretty useless since it will try to map a string (the Roles column) to a `Roles` object and, of course, if you try to execute even a simple query that involves the Roles object, like: 
+Well, in this situation the automatic mapping of Dapper.NET is pretty useless since it will try to map a string (the Roles column) to a `Roles` object and, of course, if you try to execute even a simple query that involves the Roles object, like:
 
 ```
-SELECT Id, FirstName, LastName, Roles FROM dbo.Users WHERE Id = 5
+SELECT Id, FirstName, LastName, Roles FROM dbo.Users WHERE Id = 1
 ```
 
 it will result in an error:
