@@ -11,5 +11,6 @@ version:          2.1.0
 
 plugins:
   - jekyll-paginate
+  - jekyll-related-posts
   
 paginate:         5
