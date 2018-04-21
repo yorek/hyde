@@ -18,7 +18,8 @@ li {
     margin-top: -10px
 }
 
-.posts-tags ul
+.posts-tags ul 
+.post-tags ul
 {
     margin: 0;
     padding: 0;
@@ -26,11 +27,13 @@ li {
 }
 
 .posts-tags ul li 
+.post-tags ul li
 {
     display: inline;
 }
 
 .posts-tags li 
+.post-tags li 
 {
     font-size: smaller;
     font-style: italic;
