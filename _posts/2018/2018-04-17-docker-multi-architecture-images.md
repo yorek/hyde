@@ -81,7 +81,7 @@ and it needs to index the
 
 images. The docker manifest command uses the following syntax
 
-![](https://cdn-images-1.medium.com/max/2422/1*e98_9h65IgnE9C-m0lDhdg.png)
+![](/public/images/2018-04-17/image-01.png)
 
 so here's the command for the mentioned sample:
 
@@ -100,11 +100,11 @@ docker manifest push yorek/multiarch-hello-world:latest
 
 and it will be available in your repository, just like (again) a standard image:
 
-![](https://cdn-images-1.medium.com/max/4484/1*coOS-GL7ypRcgY1WAmrxRg.png)
+![](/public/images/2018-04-17/image-02.png)
 
 and, just like a standard image it can be used:
 
-![](https://cdn-images-1.medium.com/max/2672/1*ft-E2U4gqyWbaGcixivllw.png)
+![](/public/images/2018-04-17/image-03.png)
 
 Et voila', multi-architecture support: done.
 
@@ -118,11 +118,11 @@ docker manifest inspect yorek/multiarch-hello-world:windows
 
 you'll get the details about that image:
 
-![](https://cdn-images-1.medium.com/max/3196/1*jVqt74syxGVl8d7Un5B7zg.png)
+![](/public/images/2018-04-17/image-04.png)
 
 while if you do it on a manifest list, you'll get the manifest list you created before (look at the mediaType property):
 
-![](https://cdn-images-1.medium.com/max/2808/1*l8IPCbsTeV-0fZbSsVL5Rw.png)
+![](/public/images/2018-04-17/image-05.png)
 
 as you can see in the manifest list there are references to the images (well, their manifests), via their digest value, along with the information on the supported architecture. A list of supported operating systems and architectures is available here, in the "$GOOS and $GOARCH" section:
 [Installing Go from source - The Go Programming Language](https://golang.org/doc/install/source#environment)
