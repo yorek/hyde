@@ -18,7 +18,7 @@ li {
     margin-top: -10px
 }
 
-.posts-tags ul 
+.posts-tags ul,
 .post-tags ul
 {
     margin: 0;
@@ -26,13 +26,13 @@ li {
     list-style-type: none;
 }
 
-.posts-tags ul li 
+.posts-tags ul li, 
 .post-tags ul li
 {
     display: inline;
 }
 
-.posts-tags li 
+.posts-tags li, 
 .post-tags li 
 {
     font-size: smaller;
