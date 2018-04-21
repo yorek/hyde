@@ -26,6 +26,12 @@ li {
     list-style-type: none;
 }
 
+.post-tags ul 
+{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
 .posts-tags ul li, 
 .post-tags ul li
 {
