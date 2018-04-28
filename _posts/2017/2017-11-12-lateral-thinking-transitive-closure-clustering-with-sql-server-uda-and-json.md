@@ -2,7 +2,7 @@
 layout: post
 title: "Transitive Closure Clustering with SQL Server UDA and JSON"
 subtitle: "Using SQL Server, UDA, JSON and some creative Lateral Thinkin to solve a common complex problem"
-tags: sql-server, json, lateral-thinking, graph, transitive-closure, clustering
+tags: sql-server json lateral-thinking graph transitive-closure clustering
 ---
 
 For a feature we’re developing in
