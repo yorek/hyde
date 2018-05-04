@@ -39,6 +39,15 @@ that will update all the anaconda distribution. Once “anaconda” meta-package
 
 `conda update --all`
 
+Please not the this action will update all packages to the latest version, which may be a different one than the one distributed with the anaconda metapackage. So, to summarize:
+
+If you want *latest existing version of packages (despite what's in the anaconda metapackage)*: 
+
+`conda update --all`
+
+If you want the *latest version available in anaconda metapackage*: 
+
+`conda update anaconda`
 
 ## Additional Anaconda Information
 
