@@ -3,7 +3,7 @@ layout: post
 title: "Calling Azure REST API via cUrl"
 subtitle: "A strightforward post to invoke Azure REST API via simple HTTP calls"
 tags: azure rest api oauth2 cli curl
-published: false
+published: true
 ---
 
 In these days I needed to call Azure REST API directly, without having the possibility to use some nice wrapper like [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) or [.NET SDK or Python SDK or whatever](https://azure.microsoft.com/en-us/downloads/), since the REST API I needed to call was not included in any of the mentioned tools.
