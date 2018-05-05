@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Calling Azure REST API via cUrl"
+title: "Calling Azure REST API via curl"
 subtitle: "A strightforward post to invoke Azure REST API via simple HTTP calls"
 tags: azure rest api oauth2 cli curl
 published: true
