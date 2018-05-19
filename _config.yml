@@ -7,7 +7,7 @@ tagline:          'Something clever is supposed to be written here.'
 description:      'Microsoft Data Platform MVP for 12 years, now blue badge with passion for Data Platform and Development.'
 url:              https://blog.davidemauri.it
 baseurl:          /
-version:          2.2.0
+version:          1.0.0
 
 plugins:
   - jekyll-paginate
