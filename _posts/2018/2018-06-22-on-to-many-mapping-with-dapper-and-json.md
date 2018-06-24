@@ -99,6 +99,8 @@ post: "*One-To-Many*" that is the one used to explain how to make it work, and
 the "*Complex Custom Handling*" that shows how to deal with complex object where
 you have to build a complex json, with arrays, nested objects and do so on.
 
+https://github.com/yorek/dapper-samples
+
 ## Conclusion
 
 The described techniques really opens up a world of possibilities. I encourage
