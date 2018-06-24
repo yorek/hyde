@@ -34,8 +34,7 @@ would be perfect: it would be easily deserialized into our object model,
 correctly allowing us to return a one-to-many relationship object graph.
 
     {
-        "EmailAddress": "
-    ",
+        "EmailAddress": "info@davidemauri.it",
         "FirstName": "Davide",
         "Id": 5,
         "LastName": "Mauri",
