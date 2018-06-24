@@ -63,7 +63,7 @@ want to have a *Tags *object as child of the root object. Please also note the
 double parenthesis used in the `JSON_QUERY` invocation. That function expects a
 json string as parameter, and by wrapping the `SELECT` statement in additional
 parenthesis we're telling the engine that we want to pass the result of the
-SELECT into the function. Since that result is already a JSON string, the
+`SELECT` into the function. Since that result is already a JSON string, the
 `JSON_QUERY` is needed in order to avoid json to be escaped and turned into a
 string in the final result.
 
@@ -83,7 +83,7 @@ samples available on GitHub.
 
 In the sample code you'll also find how you can return one json document for
 each User, in case you want to return more than one user a time. It's nothing
-more than an additional iteration of JSON_QUERY usage, but if you're new to SQL
+more than an additional iteration of `JSON_QUERY` usage, but if you're new to SQL
 it may not be so easy to figure out, so I though it could be helpful to have a
 sample showing how you can get this:
 
