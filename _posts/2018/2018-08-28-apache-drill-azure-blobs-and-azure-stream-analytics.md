@@ -128,7 +128,7 @@ your own values.
 You should be able now to run Apache Drill and query the configured Azure Blob
 Store:
 
-[https://player.vimeo.com/video/286972298](https://player.vimeo.com/video/286972298)
+![](https://player.vimeo.com/video/286972298)
 
 ## Querying Azure Stream analytics results
 
@@ -159,7 +159,7 @@ configured and ready to be used.
 
 You can grab the Docker solution here:
 
-https://github.com/yorek/apache-drill-azure-blob
+[https://github.com/yorek/apache-drill-azure-blob](https://github.com/yorek/apache-drill-azure-blob)
 
 Make the changes you need to the aforementioned files, build the image with the
 provided *drill-build.bat* script and then run it with *drill-run.bat*. You'll
