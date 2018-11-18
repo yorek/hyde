@@ -128,9 +128,7 @@ your own values.
 You should be able now to run Apache Drill and query the configured Azure Blob
 Store:
 
-![![Apache Drill on Azure Blob Storage](/public/images/2018-08-28/image-08.jpg)](https://vimeo.com/286972298 "Apache Drill on Azure Blob Storage - Click to Watch")
-
-![https://vimeo.com/286972298](/public/images/2018-08-28/image-08.jpg)
+[![Apache Drill on Azure Blob Storage](/public/images/2018-08-28/image-08.jpg)](https://vimeo.com/286972298 "Apache Drill on Azure Blob Storage - Click to Watch")
 
 ## Querying Azure Stream analytics results
 
