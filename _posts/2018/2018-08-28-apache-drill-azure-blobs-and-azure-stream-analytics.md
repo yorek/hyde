@@ -128,7 +128,7 @@ your own values.
 You should be able now to run Apache Drill and query the configured Azure Blob
 Store:
 
-![](https://player.vimeo.com/video/286972298)
+![](https://vimeo.com/286972298)
 
 ## Querying Azure Stream analytics results
 
