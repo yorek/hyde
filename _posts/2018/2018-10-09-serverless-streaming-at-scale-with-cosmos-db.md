@@ -39,7 +39,7 @@ To generate a stream of data to be processed an option is to use Locust. It is a
 
 The script I created generates a JSON document that simulates a very simple IoT payload:
 
-![](https://cdn-images-1.medium.com/max/1600/1*fVvIezzuiRap8kL2iEXDvQ.png)
+![](/public/images/2018-10-09/image-03.png)
 
 In order to make sure I have all the bandwidth needed to simulate even huge workload I used Azure Container Instances (Thanks to [Noel](https://twitter.com/acanthamoeba) for the help in automating it) to host test clients.
 
@@ -52,7 +52,7 @@ Luckily everything could be easily scripted using AZ CLI and Bash, so no big dea
 
 To get started with the solution I decided to create two Locust instances each one simulating 500 users, for a total load of a bit more than 1000 messages/second, or near 70K messages/minute as visible in the metrics:
 
-![](https://cdn-images-1.medium.com/max/1600/1*WT7hDK3FQziUvFPNbXZwOA.png)
+![](/public/images/2018-10-09/image-04.png)
 
 It's not a huge load, but it's great to start without burning all you credit card budget. Once I was confident with the whole solution, I tested everything up to 10K messages/second. Which is almost a billion messages per day. Enough for my tests and for many use cases. And you can always scale up even more if you need to. In the sample code you can find at the end of the article you have settings to test 1K, 5K and 10K messages/seconds. Just don't blame me about your bill, ok?
 
@@ -78,7 +78,7 @@ keep up with the incoming messages you're good. If not, try optimize and/or scal
 
 On the contrary of what happens with partitions, throughput units can easily be scaled up or down. I decided to go with two in order to have some space to move in case I needed to recover messages not processed. Here's an example:
 
-![](https://cdn-images-1.medium.com/max/1600/1*ouwDcn1Tyt6_IQPH9Clm2Q.png)
+![](/public/images/2018-10-09/image-05.png)
 
 The light blue line represent the throughput of messages being ingested (per minute) while the dark violet color shows the messages consumed. As you can see, I've highlighted a case where I needed to restart the stream processing engine and thus messages were accumulated in the Event Hub. As soon as the processing engine was restarted it tried to catch up with the messages accumulated and thus it used more bandwidth then it would normally have done. If you don't want to pre-allocate too many throughput units you can use the *Auto-Inflate *option that Event Hubs provides. But I would recommend to allocate a little bit more
 that the exact number of throughput unit you need so the solution can quickly answer to higher load request. The Auto-Inflate is great but it needs some time to kick-in and if you're interested in keeping the latency low having a few spare throughput units to use immediately helps a lot.
@@ -131,7 +131,8 @@ In an heavy multi-threaded environment like Azure Function you **really want to 
 Now is all the manual work really worth? Let's check with the help of the
 following picture:
 
-![](https://cdn-images-1.medium.com/max/1600/1*a9QbDgAw0n30iUu2rEevbw.png)
+![](/public/images/2018-10-09/image-06.png)
+
 
 The highlight "A" shows the amount of messages ingested and processed per second by the Azure Function when using the Cosmos DB binding trigger. Good, but in a more high-scale scenario than the initial one, this time with 8 servers running, it wasn't capable to process enough messages per second to keep up with the messages being pushed to Event Hub (the light blue line you can see in the
 middle).
@@ -145,11 +146,11 @@ By using the Cosmos SDK manually, [implementing a thread-safe Singleton Pattern 
 It wasn't still enough to deal with the almost 6000 messages/second I was
 sending during another test, so I simply scaled up Azure Function to an higher SKU and that's it. Scaling up took just a matter of seconds. As you can see from the highlighted section "C" I was finally able to have enough compute power to process *even more* messages that what was actually being pushed in, which it was great since not only I could catch up with messages waiting to be processed, but I was also sure I had enough compute power to handle and higher peak number of messages that may happen here and now.
 
-![](https://cdn-images-1.medium.com/max/1600/1*Hx90bnGvTXhZDYfS3LUurw.png)
+![](/public/images/2018-10-09/image-07.png)
 
 In order to find the most balanced solution, I did several performance tests and I gathered all the tests I've done into a chart that helps to summarize the results very well:
 
-![](https://cdn-images-1.medium.com/max/1600/1*A-jAkTSdE47UQWdB4JOAuQ.png)
+![](/public/images/2018-10-09/image-08.png)
 
 The Goal was to process at least 5500 messages per second (or 330K
 messages/minute) and as you can see, with the optimized code ("Test1" in the chart) I was able to do that with a P1v2 SKU. With the native CosmosDB binding, performance aren't bad, but a P1v2 SKU is not enough. I reached the goal using a P2v2, which costs twice the P1v2 SKU. Having set up the solution to use 8 workers this means a difference of more than a 1000$ per month! That's a huge saving for a simple Singleton pattern, isn't it?
@@ -177,7 +178,8 @@ But it's safe to say that with a 20K RU you'll almost surely get 5 partitions ca
 
 As your data will grow more partition will be added automatically and data distributed among the new partitions.
 
-![](https://cdn-images-1.medium.com/max/1600/1*u2yrKSxtKT68w-lDvqFOCQ.png)
+![](/public/images/2018-10-09/image-09.png)
+
 
 In my sample test the partition key was set to be the *deviceId. *This means that all measures from a single device would be sent to the same partition and data will be evenly spread over all available partitions (since the test client were generating data with a even distribution) making sure we don't hit that [10GB limits per partition](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data) that we always have to keep in mind.
 
