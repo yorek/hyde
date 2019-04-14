@@ -3,8 +3,8 @@ layout: default
 ---
 
     {% for post in site.posts %}
-    <a href="{{ post.url }}"><h1 class="posts-title">{{ post.title }}</h1></a>
-    <h2 class="posts-subtitle">{{ post.subtitle }}</h2>
+    <div class="posts-title"><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></div>
+    <div class="posts-subtitle"><h2>{{ post.subtitle }}</h2></div>
     <div class="posts-date">{{ post.date | date_to_long_string }}</div>
     <div class="posts-tags">
         <ul>
@@ -14,3 +14,4 @@ layout: default
         </ul>
     </div>
     {% endfor %}
+</ul>
