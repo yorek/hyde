@@ -202,3 +202,8 @@ This article will hopefully help you to get the things right right from the begi
 [Streaming at Scale @ GitHub](https://github.com/yorek/streaming-at-scale)
 
 As said at the beginning of this long post (and a special thanks to you if you're still reading this!), if you're interested in streaming scenarios, just keep following my blog here as I'll do more tests with other technologies (Azure SQL, IoT Hub, Azure Data Explorer…) in the near future.
+
+## June 2019 Update
+
+I’ve updated the sample to use Azure Function 2.0 and with them the performances of the native Binding works pretty well and as a result, just for performance purposes, you don’t need handle Cosmos DB connection and writes manually.
+You’ll still need to resort to manual client management if you want have additional information from Cosmos DB, like, for example, the RU used.
