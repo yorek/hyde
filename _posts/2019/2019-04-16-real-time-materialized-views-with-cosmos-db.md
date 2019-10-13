@@ -2,7 +2,7 @@
 layout: post
 title: "Real-Time Materialized Views with Cosmos DB"
 subtitle: "Keeping data updated using the Change Feed in a Serverless world"
-tags: cosmosdb serverless change-feed materialized-view
+tags: cosmos-db serverless change-feed change-stream materialized-view 
 published: true
 ---
 
@@ -20,11 +20,11 @@ The question now is: how can I implement it in Azure, using a purely serverless 
 
 “Lowest complexity possible” here means that we should try keep the number of used technologies to the minimum. For example we already know the we could use Apache Kafka or [EventHubs to implement a Lambda or Kappa architecture](/streaming-at-scale-in-azure/serverless-streaming-at-scale-with-cosmos-db-e0e26cacd27d) that would allow us to solve the problem. But will it be the simplest solution possible, or there are alternatives?
 
-# Change Feed
+## Change Feed
 
 While consuming the stream of data is a great option, you also want to be sure to capture the raw data into a database of your choice. What if we could just have both at the same time? This will make the overall solution easier and simple as we won’t have to process the stream on one side and store the data somewhere for long retention and analytics workloads on another. Luckily for us, some databases, Cosmos DB included, provides this option by publishing all the changes done to the data contained therein, as a stream of changes. The Change Feed:
 
-# A Sample Application
+## A Sample Application
 
 A sample application is available here:
 
@@ -46,21 +46,21 @@ The [Change Feed processor library](https://github.com/Azure/azure-documentdb-ch
 
 ![](/public/images/2019-04-16/image-01.png)
 
-# Materialized Views
+## Materialized Views
 
 In the described sample there are two views for data being constantly streamed by IoT devices that could be really useful.
 
-## Device View
+### Device View
 
 In the sample there are two different materialized views. One is created per each device, and contains only data related to a specific device. This helps to quickly and efficiently get the status, along with additional aggregated data, of the device someone or something is interested it. Perfect in the scenario where someone is using an app to check the values of a power meter, for example, or the status of some machinery in an oil rig.
 
-## Global View
+### Global View
 
 Another interesting set of data to keep updated as quickly as possible, is a global view of all devices, so that for each device the last status reported is aggregated and made available in a very easy and, again, efficient, way. This view is just perfect to create a global dashboard that shows the overall status of a complex machinery, for example.
 
-# Updating the Materialized Views
+## Updating the Materialized Views
 
-## Within-Partition Updates
+### Within-Partition Updates
 
 As mentioned before, Change Feed assures that all changes related to data in a partition is processed in order. In the IoT sample we’re using, the *raw* data collection is partitioned by *DeviceId.* This guarantees that all changes made to a device will be received and processed in the correct order and that only one function will ever write data into the materialized view created for that specific device.
 
@@ -70,7 +70,7 @@ As soon as data from Change Feed is processed, the function looks for an existin
 
 There is no need for concurrency control here as, since data is partitioned by Device Id, all changes for the same device will arrive in order and only one function at time will process that data. Basically data is serialized on per-device basis so there are not chances of conflicts.
 
-## Cross-Partitions Updates
+### Cross-Partitions Updates
 
 Here this are a little more complex, but really not that much. If you are used to the concept of *Optimistic Concurrency Control*, you already are aware of the fact that
 
@@ -92,13 +92,13 @@ You could batch some changes together so that you can update the global view by 
 
 Another option is to chain Change Feed together: you could create a collection only to store Devices Materialized Views, monitor it via its own change feed and then use that change feed to create the Global Materialized View. If you’re not going to have millions of devices, you can put the Devices Materialized Views in just one partition to make sure you won’t have any concurrency problem when consuming that Change Feed.
 
-# For The Relational Guy
+## For The Relational Guy
 
 If you come from the relational world (like me), Change Feed is really nothing more then what is otherwise know as Change Data Capture. The ability to have a stream of changes coming from the database is amazingly useful and I was using it quite a lot also for creating near-real time updated Business Intelligence solutions. I just discovered that there is also a tool called Debezium that will enable this feature, feed data into Apache Kafka, for the most common DMBS out there.
 
 [Debezium](https://debezium.io/?source=post_page-----90ecea84f650----------------------)
 
-# Sample Code
+## Sample Code
 
 Full sample code, as usual, is available here:
 
