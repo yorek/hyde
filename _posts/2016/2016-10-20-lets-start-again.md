@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Let’s start again"
-subtitle: "personal"
-tags: 
+subtitle: 
+tags: "personal"
 published: true
 ---
 

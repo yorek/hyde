@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Using NLog with Azure Functions"
-subtitle: "azure-functions nlog logging"
-tags: 
+subtitle: 
+tags: "azure-functions nlog logging"
 published: true
 ---
 
