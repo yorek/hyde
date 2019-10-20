@@ -6,6 +6,7 @@ $tags = @()
 Write-Host "Gathering used tags..."
 foreach($post in $posts)
 {
+    #Write-Host "Processing $post.Name"
     $postTags = Get-Content $post.FullName | Where-Object {$_ -like "tags:*"}
     if (-not $postTags) { continue }
     $postTags = $postTags.Remove(0, 5).Trim()       

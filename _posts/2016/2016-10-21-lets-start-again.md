@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Let’s start again"
-subtitle: 
-tags: "personal"
+subtitle: "Back to development, togheter with Data and IoT" 
+tags: personal
 published: true
 ---
 
@@ -17,3 +17,4 @@ I’ll still be working on SQL Server, with its Azure version — SQL Azure — 
 It’s now time, then, to start a new blog, more general than the one I already have on [sqlblog.com](http://sqlblog.com/blogs/davide_mauri/default.aspx), where I will still post things related to SQL Server and the Azure Data Platform. Here I will use this space to share and save for future references everything I’ll learn, explore and use to reach my goal and do my job. But also more philosophical ideas and thoughts on development and software engineering and architecture.
 
 That’s all for now. Talk to you soon my friends.
+

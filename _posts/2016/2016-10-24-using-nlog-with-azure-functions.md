@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Using NLog with Azure Functions"
-subtitle: 
-tags: "azure-functions nlog logging"
+subtitle: "Integrating NLog with Azure Functions"
+tags: azure-functions nlog
 published: true
 ---
 
@@ -13,6 +13,11 @@ I have created my assembly that does everything I want, I deployed it on Azure F
 Works with the exception of logging. I have used [NLog](http://nlog-project.org/) in my assembly, but Azure Functions have their own logging infrastructure which, of course, is not aware of the fact that I already have one.
 
 I need to be able to redirect NLog logging to Azure Function logs so that they I can take advantage of the existing infrastructure. Luckily this is quite easy to do: Azure Functions provides a TraceWriter class for logging, so all is needed to be done is to instruct NLog to use such TraceWriter. This can be done by creating a new NLog Target and then using it. At the end of the day something like this will be exactly what I need:
+
+```
+Logger _nlog = HookNLogToAzureLog(log);
+_nlog.Info("Hello from NLog");
+```
 
 After that all NLog calls will be sent to the Azure Function logging infrastructure:
 
