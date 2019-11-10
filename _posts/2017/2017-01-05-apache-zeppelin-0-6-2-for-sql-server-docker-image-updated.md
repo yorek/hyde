@@ -5,7 +5,7 @@ subtitle: "Using volumes to persist notebooks and interpreters configurations"
 tags: apache zeppelin sql-server azure-sql azure-dw
 published: true
 ---
-In order to be able to keep created notebooks *and* interpreters configurations when upgrading the docker image to a newer version, I changed the *dockerfile*to use docker *volumes*
+In order to be able to keep created notebooks *and* interpreters configurations when upgrading the docker image to a newer version, I changed the *dockerfile* to use docker *volumes*
 
 [Manage data in containers](https://docs.docker.com/engine/tutorials/dockervolumes/?source=post_page-----f9bba4f89a0c----------------------)
 
@@ -25,7 +25,7 @@ To be sure that your container is using volumes, you can check it using the *ins
 docker inspect zeppelin
 ```
 
-The output is a JSON with detailed information on the container. Look for the *Mounts*node:
+The output is a JSON with detailed information on the container. Look for the *Mounts* node:
 
 ![](/public/images/2017-01-05/image-01.png)
 
