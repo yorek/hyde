@@ -2,7 +2,7 @@
 layout: post
 title: "Building REST API with Python, Flask and Azure SQL"
 subtitle: "Creating a REST API with Azure SQL is much, much, easier than what you think"
-tags: sql-server azure-sql azure developers rest python flask json
+tags: sql-server azure-sql azure developers rest python flask json web-api
 published: true
 ---
 ![](/public/images/2020-01-07/image-01.png)
