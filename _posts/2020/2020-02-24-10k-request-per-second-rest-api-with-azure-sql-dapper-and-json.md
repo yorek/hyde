@@ -122,7 +122,7 @@ By scaling up and out a bit, I was able to reach almost **10.000** request per s
 
 ![](/public/images/2020-02-24/image-02.png)
 
-If you’re wondering what solution I used to create load test, you can find all details, along with deployable code, here: [Running Locust On Azure](/@mauridb/running-locust-on-azure-516eb2487d18).
+If you’re wondering what solution I used to create load test, you can find all details, along with deployable code, here: [Running Locust On Azure](/2020/02/19/running-locust-on-azure).
 
 Now, the solution could seem complete already…but it really is? Not really, when working with the cloud, we *always* need to take think about resiliency.
 
