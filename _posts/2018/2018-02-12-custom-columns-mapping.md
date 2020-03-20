@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Custom Columns Mapping"
+title: "Dapper.NET: Custom Columns Mapping"
 subtitle: "Go beyond the \"same name\" mapping"
 tags: dapper dotnet micro-orm orm column-mapping
 ---
