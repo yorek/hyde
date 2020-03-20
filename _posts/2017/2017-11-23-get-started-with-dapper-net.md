@@ -2,7 +2,7 @@
 layout: post
 title: "Dapper .NET: Getting started"
 subtitle: "Learning Dapper .NET basics with 10 samples"
-tags: dapper micro-orm azure-sql sql-server
+tags: dapper micro-orm azure-sql sql-server csharp
 published: true
 ---
 Dapper is a micro ORM born in 2011. You can still find the original post online, [here](https://samsaffron.com/archive/2011/03/30/How+I+learned+to+stop+worrying+and+write+my+own+ORM).

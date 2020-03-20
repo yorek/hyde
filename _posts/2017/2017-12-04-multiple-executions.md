@@ -2,7 +2,7 @@
 layout: post
 title: "Dapper .NET: Multiple Executions"
 subtitle: "A nice feature that is NOT as cool as it seems"
-tags: dapper micro-orm azure-sql sql-server
+tags: dapper micro-orm azure-sql sql-server csharp
 published: true
 ---
 In Dapper .NET, Multiple execution is a convenient (or maybe not? make sure you read the article until the end!) way to execute the same query multiple times with different parameters values.
