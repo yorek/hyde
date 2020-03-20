@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1:N Mapping with Dapper and JSON"
+title: "Dapper .NET: 1:N Mapping with Dapper and JSON"
 subtitle: "A nice way to deal with a very common request and complex objects"
 tags: dapper dotnet micro-orm orm json one-to-many
 published: true

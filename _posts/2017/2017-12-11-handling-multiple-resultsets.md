@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Handling Multiple Resultsets"
+title: "Dapper .NET: Handling Multiple Resultsets"
 subtitle: "While not a very common usage scenario, it can come handy sometimes"
 tags: dapper micro-orm azure-sql sql-server csharp
 published: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQL Server Specific Features"
+title: "Dapper .NET: SQL Server Specific Features"
 subtitle: "Table-Valued parameters, Spatial and HiearchyID data types are all supported"
 tags: dapper dotnet micro-orm orm column-mapping sql-server
 ---
