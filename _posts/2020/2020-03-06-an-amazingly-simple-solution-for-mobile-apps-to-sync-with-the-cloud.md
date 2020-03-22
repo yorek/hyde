@@ -17,7 +17,7 @@ This may be needed for several reasons, here’s a few:
 
 Let’s see the process a bit more in detail and let’s also generalize a bit so we can came up with a solution that will work on all possible situations.
 
-[An amazingly simple solution for Mobile Apps to sync with the Cloud using Change Tracking API](https://www.youtube.com/watch?v=Ev9ru6qDApU)
+[An amazingly simple solution for Mobile Apps to sync with the Cloud using Change Tracking API](https://www.youtube.com/watch?v=c1BmNruu6wc)
 
 ## App to Cloud Sync
 
