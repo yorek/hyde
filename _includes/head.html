@@ -18,7 +18,8 @@
   <link rel="canonical" href="{{ page.canonical-url }}" />  
   {% endif %}
   <meta name="description" content="{{ page.subtitle }}">
-  <meta name="description" content="{{ page.tags | join ',' }}">
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  <meta name="author" content="Davide Mauri">
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ 'public/css/poole.css' | absolute_url }}">
