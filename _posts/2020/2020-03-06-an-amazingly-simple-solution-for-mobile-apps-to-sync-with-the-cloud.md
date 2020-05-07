@@ -4,6 +4,7 @@ title: "An amazingly simple solution for Mobile Apps to sync with the Cloud"
 subtitle: "Change Tracking API + JSON will make your dev life so easy you won’t believe it’s Azure SQL"
 tags: sql-server azure-sql azure developers rest dotnet netcore json dapper web-api sync mobile change-tracking
 published: true
+canonical-url: "https://techcommunity.microsoft.com/t5/azure-sql-database/sync-mobile-apps-with-azure-using-change-tracking-api/ba-p/1213993"
 ---
 If you are creating a mobile app that will work sending data back and forth from the cloud (I guess that 99% of the apps fall into this use case), you will have at some point the need to sync data between the app and the cloud itself.
 
