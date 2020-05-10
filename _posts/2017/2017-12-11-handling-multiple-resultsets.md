@@ -3,6 +3,7 @@ layout: post
 title: "Dapper .NET: Handling Multiple Resultsets"
 subtitle: "While not a very common usage scenario, it can come handy sometimes"
 tags: dapper micro-orm azure-sql sql-server csharp
+canonical-url: "https://medium.com/dapper-net/handling-multiple-resultsets-4b108a8c5172"
 published: true
 ---
 It may happen that you are interested in executing a batch of SQL commands whose results produce not only one resultset, but more than one. This helps to avoid doing additional roundtrips to the database. For example you can return suppliers and customers at once executing the following statement in the same command:

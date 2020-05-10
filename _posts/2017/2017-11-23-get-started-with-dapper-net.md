@@ -2,6 +2,7 @@
 layout: post
 title: "Dapper .NET: Getting started"
 subtitle: "Learning Dapper .NET basics with 10 samples"
+canonical-url: "https://medium.com/dapper-net/get-started-with-dapper-net-591592c335aa"
 tags: dapper micro-orm azure-sql sql-server csharp
 published: true
 ---

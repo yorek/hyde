@@ -2,6 +2,7 @@
 layout: post
 title: "Dapper.NET: Custom Columns Mapping"
 subtitle: "Go beyond the \"same name\" mapping"
+canonical-url: "https://medium.com/dapper-net/custom-columns-mapping-1cd45dfd51d6"
 tags: dapper dotnet micro-orm orm column-mapping
 ---
 

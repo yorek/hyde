@@ -2,6 +2,7 @@
 layout: post
 title: "Dapper .NET: Custom Type Handling"
 subtitle: "Go beyond Dapper limits and map arbitrary complex class"
+canonical-url: "https://medium.com/dapper-net/custom-type-handling-4b447b97c620"
 tags: dapper dotnet micro-orm orm custom-handling
 ---
 

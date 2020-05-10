@@ -3,6 +3,7 @@ layout: post
 title: "Dapper .NET: Multiple Mapping"
 subtitle: "Mapping a single row to multiple objects"
 tags: dapper micro-orm azure-sql sql-server csharp
+canonical-url: "https://medium.com/dapper-net/multiple-mapping-d36c637d14fa"
 published: true
 ---
 
