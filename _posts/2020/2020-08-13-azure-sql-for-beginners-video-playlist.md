@@ -18,7 +18,7 @@ and much more! To quickly learn why Azure SQL is one of the best cloud database 
 
 To help all the new developers get started with Azure SQL, my colleague [Anna](https://twitter.com/analyticanna) and [Bob](https://twitter.com/bobwardms) created a truly amazing, and above all very helpful, set of videos. Here's one that shows how to create an Azure SQL database in just 5 minutes:
 
-[Demo: Deploy Azure SQL Database | Azure SQL for beginners (Ep. 14)](https://www.youtube.com/watch?v=wiBC4OxFX60)
+[Demo: Deploy Azure SQL Database - Azure SQL for beginners (Ep. 14)](https://www.youtube.com/watch?v=wiBC4OxFX60)
 
 And this is only one of the many - 61 to be precise - that have been made available recently, to help developers, new and veterans, to really learn almost everything around Azure SQL and and deployment and management options offer to you:
 
