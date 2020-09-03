@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Querying and visualizing data using SQLPad"
-subtitle: ""
+subtitle: "A free tool to easily query and explore data in Azure SQL"
 tags: sql-server azure-sql azure developers query visualization tool
 published: true
 canonical-url: "https://devblogs.microsoft.com/azure-sql/querying-and-visualizing-data-using-sqlpad/"
