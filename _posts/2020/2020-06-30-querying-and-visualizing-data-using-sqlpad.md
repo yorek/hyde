@@ -9,7 +9,7 @@ canonical-url: "https://devblogs.microsoft.com/azure-sql/querying-and-visualizin
 
 SQLPad is an amazing free, open source, tool to run SQL Queries against a broad spectrum of popular databases, without the need to install and run something on-premises. It’s lightweight, simple and just perfect if you need a no-frills tool to query and visualize data, to do some data exploration.
 
-![](./public/images/2020-06-30/image-01.png)
+![](/public/images/2020-06-30/image-01.png)
 
 As a developer, especially if you are not that much into data, you probably don’t always need all the features that full-fledged product like SQL Server Management Studio or other on-premises tool provides. You need something lean and simple. But not too simple. And in addition to that, you may want to use a cloud tool to query data that lives in the cloud. I’ve found a very nice community driven and open source tool that hits this sweet spot, at this tool is SQLPad.
 
@@ -49,7 +49,7 @@ Then you can connect to SQLPad at `http://<ip-address>:`3000`
 
 The first time you’ll try to access SQL you need to sign-up, and this first account will also be set as the administrative account.
 
-![](./public/images/2020-06-30/image-02.png)
+![](/public/images/2020-06-30/image-02.png)
 
 There are several options for authenticating users, all described in the guide. After you have defined the administrative account, you can login with the newly created account and then start to create a connection.
 
@@ -57,7 +57,7 @@ There are several options for authenticating users, all described in the guide. 
 
 After you logged you, you need to create a connection or use an existing one.
 
-![](./public/images/2020-06-30/image-03.png)
+![](/public/images/2020-06-30/image-03.png)
 
 Once the connection is selected you can start querying. Once you are done, if you don’t want to spend money while you are not using SQLPad, you can destroy the container using the following command:
 

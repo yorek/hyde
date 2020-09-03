@@ -9,11 +9,11 @@ canonical-url: "https://devblogs.microsoft.com/azure-sql/practical-azure-sql-dat
 
 I'm super happy and excited to share with you all that a book I've been working on along with four other colleagues is now finished and will be available very soon in bookstores and eBooks format!
 
-[![Practical Azure SQL Database for Modern Developers book](./public/images/2020-09-02/image-01.jpg)](https://www.apress.com/it/book/9781484263693)
+[![Practical Azure SQL Database for Modern Developers book](/public/images/2020-09-02/image-01.jpg)](https://www.apress.com/it/book/9781484263693)
 
 The book is something I've wanted to write since long time ago, as I think SQL knowledge is of paramount importance for a modern full-stack or back-end developer. Data plays a central role in today's world, and the ability to manage and use it correctly is really a plus for anyone in the IT industry. 
 
-![A developer with good SQL knowledge is like a superhero with superpowers](./public/images/2020-09-02/image-02.jpg)
+![A developer with good SQL knowledge is like a superhero with superpowers](/public/images/2020-09-02/image-02.jpg)
 
 **I wanted a book for developers, written by developers that would discuss and present Azure SQL from a developer perspective.** A book that could be enjoyed by developers who are not (yet!) passionate about data and database: it should have the correct mix of practical approach so that one could benefit from reading it right from day one, but also give enough information and references that, in case someone would like to know more, could find everything needed to start to dig deeper into database knowledge.
 

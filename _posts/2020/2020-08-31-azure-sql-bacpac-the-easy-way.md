@@ -37,4 +37,4 @@ To help everyone, from new developers to experienced ones, as said at the very b
 
 ## Conclusion
 
-Now that you know how to backup/restore or import/export Azure SQL databases, you can try to use sample database to create some cool stuff with Azure SQL, for example [10K RPS REST API with Azure SQL, Dapper and JSON](./2020/02/24/10k-request-per-second-rest-api-with-azure-sql-dapper-and-json/). And stay tuned as more cool stuff will come this way very soon!
+Now that you know how to backup/restore or import/export Azure SQL databases, you can try to use sample database to create some cool stuff with Azure SQL, for example [10K RPS REST API with Azure SQL, Dapper and JSON](/2020/02/24/10k-request-per-second-rest-api-with-azure-sql-dapper-and-json/). And stay tuned as more cool stuff will come this way very soon!
