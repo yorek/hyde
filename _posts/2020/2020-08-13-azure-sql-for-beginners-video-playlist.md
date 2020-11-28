@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Azure SQL for Beginners – Video Playlist"
-subtitle: "A book on Azure SQL for developers written by developers"
+subtitle: "A series of videos to go from 0 to Hero on Azure SQL"
 tags: azure-sql azure developers beginners playlist video
 published: true
 canonical-url: "https://devblogs.microsoft.com/azure-sql/azure-sql-for-beginners-video-playlist/"
