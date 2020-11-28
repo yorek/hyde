@@ -3,7 +3,7 @@ highlighter:      rouge
 permalink:        pretty
 
 title:            Davide Mauri's Blog
-tagline:          'Something clever is supposed to be written here.'
+tagline:          'Ideas and rumblings around data and development.'
 description:      'Microsoft Data Platform MVP for 12 years, now Azure SQL PM with passion for Data Platform and Development.'
 url:              https://blog.davidemauri.it
 baseurl:          /
