@@ -7,8 +7,6 @@ published: true
 canonical-url: "https://devblogs.microsoft.com/azure-sql/resources-to-become-a-full-stack-well-rounded-developer/"
 ---
 
-![Coding](/public/images/2020-10-08/image-01.png)
-
 If you want to start coding and create your own solutions - be it an App, a Website or something else - or if you want to start a career as developer, you're in luck! 
 
 There has never been so many and so good training material around, and - even better - available for free. Last addition to the amazing long list of videos and resources is the Javascript for Beginners series:
@@ -48,7 +46,3 @@ And, last but not least, a series of end-to-end samples to learn how to put ever
 [End-To-End Samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-sql-database)
 
 More will keep coming, but I guess you this is enough to get started. With the knowledge shared in these resources, you can build amazing stuff!
-
----
-
-Photo by [ThisIsEngineering](https://www.pexels.com/@thisisengineering?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/female-software-engineer-coding-on-computer-3861951/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)

@@ -7,8 +7,6 @@ published: true
 canonical-url: "https://devblogs.microsoft.com/azure-sql/serverless-streaming-at-scale-with-azure-sql/"
 ---
 
-![azure-sql-iot-1](/public/images/2020-10-19/image-01.png)
-
 Just before Ignite, a [very interesting case study done with RXR](https://customers.microsoft.com/en-us/story/843823-rxr-realty-reopens-for-business-using-azure-iot) has been released, where they showcased their IoT solution to bring safety in buildings during COVID times. It uses Azure SQL to store warm data, allowing it to be served and consumed to all downstream users, from analytical applications to mobile clients, dashboards, API, and business users.
 
 If you haven’t done yet, [you definitely should watch the Ignite recording](https://myignite.microsoft.com/sessions/7a0f75b5-0ab1-483f-86a1-4f7fdb5a4ed5) (the IoT part start at minute 22:59). Not only the architecture presented is super interesting, but also the guest presenting it — Tara Walker — is super entertaining and joyful to listen to. Which is not something common in technical sessions. Definitely a bonus!
