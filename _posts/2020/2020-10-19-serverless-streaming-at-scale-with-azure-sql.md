@@ -37,7 +37,7 @@ If you’re now ready for some tech stuff, let’s get started.
 
 So, let’s see it in detail. As usual, I don’t like to discuss without also having a practical way to share knowledge, so you can find everything ready to be deployed in your Azure subscription here:
 
-{% github Azure-Samples/streaming-at-scale no-readme%}
+[Streaming at Scale](https://github.com/Azure-Samples/streaming-at-scale)
 
 As that would not be enough, I also enjoyed recording a short video to go through the working solution, giving you a glimpse of what you’ll get, without the need for you to spend any credit if you are not yet ready to do that:
 
